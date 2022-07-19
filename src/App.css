@@ -42,3 +42,8 @@
   width: 600px;
   height: 300px;
 }
+
+.form-select {
+  text-align: left;
+  width: 600px;
+}

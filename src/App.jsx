@@ -1,74 +1,100 @@
 import React from 'react';
 import './App.css';
+import sampleText from './SampleText.json';
 
 function App() {
-  const initText = 'a中国b💩Poo😇🥰😍es😀😃😊✂🪰1231Привет旧統一教会の元牧師が明かす“献金ノルマ”“政治とのつなが$2, ₿€1, ¥9어떻게 도와드릴까요oogle. يمكنك تغيير لغة العرض إلى لغتك المفضّلة في أي وقت.préférée dans vos  à jour les paramè języka używanego w usłπεριορισμό κυριαρχίαςעה פוליטית או דעה בבעיות אחר สระและเสมอภาคกันในเกีย';
-
   const regExpArray = [
-    '.',
-    '\\p{Letter}',
-    '\\p{Number}',
-    '\\p{ASCII}',
-    '\\p{Emoji}',
-    '(?=[\\p{Emoji}])[^\\d]',
-    // '\\p{Basic-Emoji}',
-    // '\\p{Emoji_Presentation}',
-    '\\p{sc=Han}',
-    '\\p{sc=Hang}',
-    '\\p{sc=Hiragana}',
-    '\\p{sc=Katakana}',
-    '\\p{sc=Cyrillic}',
-    '\\p{sc=Arabic}',
-    '\\p{sc=Latin}',
-    '\\p{sc=Greek}',
-    '\\p{sc=Hebrew}',
-    '\\p{sc=Thai}',
-    '\\p{Currency_Symbol}',
+    ['.', 'Anything'],
+    ['\\p{Letter}', 'Letter'],
+    ['\\p{Number}', 'Number'],
+    ['\\p{P}', 'Punctuation'],
+    ['\\p{M}', 'Mark'],
+    ['\\p{Currency_Symbol}', 'Currency'],
+    ['(?=[\\p{Emoji}])[\\D]', 'Emoji'],
+    ['\\p{ASCII}', 'ASCII'],
+    ['\\p{sc=Latin}', 'Latin'],
+    ['\\p{sc=Han}', 'CJK (Chinese, Japanese and Korean)'],
+    ['\\p{sc=Hiragana}', 'Japanese Hiragana 平假名'],
+    ['\\p{sc=Katakana}', 'Japanese Katakana 片假名'],
+    ['\\p{sc=Hang}', 'Korean'],
+    ['\\p{sc=Arabic}', 'Arabic'],
+    ['\\p{sc=Cyrillic}', 'Cyrillic'],
+    ['\\p{sc=Greek}', 'Greek'],
+    ['\\p{sc=Hebrew}', 'Hebrew'],
+    ['\\p{sc=Myanmar}', 'Myanmar'],
+    ['\\p{sc=Thai}', 'Thai'],
   ];
 
   const outputArray = [];
+  const initText = 'A better world designed and made for all';
   const [text, setText] = React.useState(initText);
+  const [sampleSelect, setSampleSelect] = React.useState(initText);
 
   regExpArray.forEach((regexp) => {
-    // console.log(`Regular expression: ${item}`);
-    const ret = text.match(new RegExp(regexp, 'ugs'));
-    // if (ret) {
-    //   console.log(ret);
-    //   // console.log(`<${ret.join('-')}>`);
-    // } else {
-    //   console.log('No matches found');
-    // }
+    const ret = text.match(new RegExp(regexp[0], 'ugs'));
     outputArray.push({ regexp, ret });
   });
 
   return (
     <div className="App">
-      <p>Hello world</p>
-      <textarea
-        className="textarea"
-        placeholder="Enter or paste text here"
-        type="textarea"
-        value={text}
-        onChange={(e) => { setText(e.target.value); }}
-      />
-      <table>
+      <div>
+        <div>
+          <textarea
+            className="textarea"
+            placeholder="Enter text here"
+            type="text"
+            value={text}
+            onChange={(e) => { setText(e.target.value); }}
+          />
+        </div>
+        <div>
+          Sample text:
+          <select
+            value={sampleSelect}
+            aria-label="Default select example"
+            onChange={(e) => {
+              setSampleSelect(e.target.value);
+              setText(e.target.value);
+            }}
+          >
+            {sampleText.map((item) => (
+              <option value={item.text}>{`${item.language} : ${item.text}`}</option>
+            ))}
+          </select>
+        </div>
+      </div>
+      <table className="table table-striped table-bordered">
         <thead>
           <tr>
             <th scope="col">RegExp</th>
+            <th scope="col">Description</th>
             <th scope="col">Result</th>
           </tr>
         </thead>
         <tbody>
           {
               outputArray.map((item) => (
-                <tr key={item.regexp}>
-                  <td>{item.regexp}</td>
+                <tr key={item.regexp[0]}>
+                  <td>{`/${item.regexp[0]}/gu`}</td>
+                  <td>{item.regexp[1]}</td>
                   <td>{item.ret}</td>
                 </tr>
               ))
             }
         </tbody>
       </table>
+      <div>
+        Useful links
+        <div>
+          <a href="https://util.unicode.org/UnicodeJsps/character.jsp">Unicode Utilities: Character Properties</a>
+        </div>
+        <div>
+          <a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp">Unicode Utilities: UnicodeSet</a>
+        </div>
+        <div>
+          <a href="https://regex101.com/">Regular Expression online tester</a>
+        </div>
+      </div>
     </div>
   );
 }

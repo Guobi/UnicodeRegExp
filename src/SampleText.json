@@ -1,0 +1,97 @@
+[
+  {
+    "code": "ar",
+    "language": "Arabic",
+    "text": "عالم أفضل مصمم ومصنوع للجميع"
+  },
+  {
+    "code": "en",
+    "language": "English",
+    "text": "A better world designed and made for all"
+  },
+  {
+    "code": "fr",
+    "language": "French",
+    "text": "Un monde meilleur conçu et fait pour tous"
+  },
+  {
+    "code": "de",
+    "language": "German",
+    "text": "Eine bessere Welt, entworfen und gemacht für alle"
+  },
+  {
+    "code": "he",
+    "language": "Hebrew",
+    "text": "עולם טוב יותר שתוכנן ונועד לכולם"
+  },
+  {
+    "code": "ja",
+    "language": "Japanese",
+    "text": "すべての人のために設計され、作られたより良い世界"
+  },
+  {
+    "code": "ko",
+    "language": "Korean",
+    "text": "모두를 위해 설계되고 만들어진 더 나은 세상"
+  },
+  {
+    "code": "gr",
+    "language": "Greek",
+    "text": "Ένας καλύτερος κόσμος σχεδιασμένος και φτιαγμένος για όλους"
+  },
+  {
+    "code": "vi",
+    "language": "Vietnamese",
+    "text": "Một thế giới tốt đẹp hơn được thiết kế và tạo ra cho tất cả mọi người"
+  },
+  {
+    "code": "ru",
+    "language": "Russian",
+    "text": "Лучший мир, спроектированный и созданный для всех"
+  },
+  {
+    "code": "th",
+    "language": "Thai",
+    "text": "โลกที่ดีกว่าที่ออกแบบและสร้างขึ้นเพื่อทุกคน"
+  },
+  {
+    "code": "tr",
+    "language": "Turkish",
+    "text": "Herkes için tasarlanmış ve yapılmış daha iyi bir dünya"
+  },
+  {
+    "code": "zh-cn",
+    "language": "Simplified Chinese",
+    "text": "为所有人设计和制造的更美好世界"
+  },
+  {
+    "code": "zh-tw",
+    "language": "Traditional Chinese",
+    "text": "為所有人設計和製造的更美好世界"
+  },
+  {
+    "code": "uk",
+    "language": "Ukrainian",
+    "text": "Кращий світ розроблений і створений для всіх"
+  },
+  {
+    "code": "my",
+    "language": "Burmese",
+    "text": "ပိုမိုကောင်းမွန်သောကမ္ဘာကို အားလုံးအတွက် ဒီဇိုင်းထုတ်ပြီး ဖန်တီးထားသည်။"
+  },
+  {
+    "code": "emoji",
+    "language": "Emoji",
+    "text": "😍🥰😛😝😜🤪🤨🧐🤓😎🥸🤩🥳😏👌🤌🧳 🌂🦌 🐕"
+  },
+  {
+    "code": "currency",
+    "language": "Currency",
+    "text": "$₿€¥₩£"
+  },
+  {
+    "code": "Punctuation",
+    "language": "Punctuation",
+    "text": "，。；【】「」[]{},."
+  }
+]
