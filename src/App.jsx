@@ -13,7 +13,7 @@ function App() {
     ['(?=[\\p{Emoji}])[\\D]', 'Emoji'],
     ['\\p{ASCII}', 'ASCII'],
     ['\\p{sc=Latin}', 'Latin'],
-    ['\\p{sc=Han}', 'CJK (Chinese, Japanese and Korean)'],
+    ['\\p{sc=Han}', 'Chinese'],
     ['\\p{sc=Hiragana}', 'Japanese Hiragana 平假名'],
     ['\\p{sc=Katakana}', 'Japanese Katakana 片假名'],
     ['\\p{sc=Hang}', 'Korean'],
@@ -90,6 +90,9 @@ function App() {
         </div>
         <div>
           <a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp">Unicode Utilities: UnicodeSet</a>
+        </div>
+        <div>
+          <a href="https://unicode.org/reports/tr18/">UNICODE REGULAR EXPRESSIONS</a>
         </div>
         <div>
           <a href="https://regex101.com/">Regular Expression online tester</a>
