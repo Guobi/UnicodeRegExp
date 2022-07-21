@@ -5,6 +5,7 @@ import sampleText from './SampleText.json';
 function App() {
   const regExpArray = [
     ['.', 'Anything'],
+    ['\\w', 'English word'],
     ['\\p{Letter}', 'Letter'],
     ['\\p{Number}', 'Number'],
     ['\\p{P}', 'Punctuation'],
